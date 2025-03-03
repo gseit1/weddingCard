@@ -19,7 +19,8 @@ body {
     height: 100vh;
     padding: 20px;
 }
-.main-photo h2{
+.main-photo h2 {
+    
     font-size: 23px;
     color: gold;
 }
