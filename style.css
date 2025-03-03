@@ -1,0 +1,144 @@
+body {
+    font-family: 'Dancing Script', cursive;
+    background-color: #f8f9fa; /* Light background color */
+    color: #343a40;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.mainPhoto {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.gampros-nyfi {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.gamprosNyfiPhoto {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 10px;
+    object-fit: cover;
+}
+
+.gampros-nyfi h2 {
+    width: 100%;
+    color: gold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gampros-nyfi p {
+    text-align: center;
+    width: 100%;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .gampros-nyfi {
+        flex-direction: column;
+    }
+    .gamprosNyfiPhoto {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.kratisi-thesis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+.photo-container p{
+    color: gold;
+}
+.ithikoi-aytourgoi  h2,.pantreyomaste h2,.mystirio-plirofories h2,.kratisi-thesis h2{
+    color: gold;
+}
+
+.form-group {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.form-check input {
+    margin-right: 10px;
+}
+
+.btn-primary {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+.pantreyomaste, .ithikoi-aytourgoi, .mystirio-plirofories {
+    padding: 40px 20px;
+    text-align: center;
+}
+.btn-map {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-map:hover {
+    background-color: #218838;
+}
+
+.btn-map i {
+    margin-right: 5px;
+}
