@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Quiz</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+            font-family: 'Dancing Script', cursive;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+            animation: pop-up 1s infinite;
+        }
+        .header h2 {
+            color: #ff7e7e;
+            font-size: 2em;
+        }
+        .quiz-container {
+            position: relative;
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .quiz-question {
+            display: none;
+        }
+        .quiz-question.active {
+            display: block;
+        }
+        .btn-primary {
+            background-color: #ff7e7e;
+            border-color: #ff7e7e;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #ff4e4e;
+            transform: scale(1.05);
+        }
+        h3 {
+            color: #ff7e7e;
+        }
+        @keyframes pop-up {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="images/fish.png" alt="Fish Icon">
+        <h2>Για να δουμε τι ψάρια πιανεις;</h2>
+    </div>
+    <div class="quiz-container">
+        <h2>Wedding Quiz</h2>
+        <form id="quizForm" action="https://formsubmit.co/pspkorinos33@gmail.com" method="POST">
+            <div class="quiz-question active" id="playerName">
+                <h3>Ποιο είναι το όνομά σας;</h3>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="playerName" id="playerNameInput" placeholder="Όνομα" required>
+                </div>
+                <button type="button" class="btn btn-primary next-btn">Επόμενο</button>
+            </div>
+            <div class="quiz-question" id="poiosParamilaei">
+                <h3>1. Ποιος παραμιλάει στον ύπνο του;</h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="poiosParamilaei" id="q1a" value="Panos" required>
+                    <label class="form-check-label" for="q1a">Παναγιώτης</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="poiosParamilaei" id="q1b" value="Katia">
+                    <label class="form-check-label" for="q1b">Κατερίνα</label>
+                </div>
+               
+                <button type="button" class="btn btn-primary next-btn">Επόμενο</button>
+            </div>
+            <div class="quiz-question" id="diakopes">
+                <h3>2. Που πήγαμε πρώτη φορά διακοπές;</h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="diakopes" id="q2a" value="Romi" required>
+                    <label class="form-check-label" for="q2a">Ρώμη</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="diakopes" id="q2b" value="Mpansko">
+                    <label class="form-check-label" for="q2b">Μπάνσκο</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="diakopes" id="q2c" value="Monaxo">
+                    <label class="form-check-label" for="q2c">Μόναχο</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="diakopes" id="q2d" value="zagoroxoria">
+                    <label class="form-check-label" for="q2d">Ζαγοροχώρια</label>
+                </div>
+                <button type="button" class="btn btn-primary next-btn">Επόμενο</button>
+            </div>
+            <div class="quiz-question" id="agapimenosArithmos">
+                <h3>3.Ποιος είναι ο αγαπημένος αριθμός του Παναγιώτη; </h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="agapimenosArithmos" id="q3a" value="4" required>
+                    <label class="form-check-label" for="q3a">4</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="agapimenosArithmos" id="q3b" value="33">
+                    <label class="form-check-label" for="q3b">33</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="agapimenosArithmos" id="q3c" value="22">
+                    <label class="form-check-label" for="q3c">22</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="agapimenosArithmos" id="q3d" value="10">
+                    <label class="form-check-label" for="q3d">10</label>
+                </div>
+                <button type="button" class="btn btn-primary next-btn">Επόμενο</button>
+            </div>
+            <div class="quiz-question" id="katerinaKsypnima">
+                <h3>4. Τι κάνει η Κατερίνα με το που ξυπνάει; </h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="katerinaKsypnima" id="q4a" value="prwino" required>
+                    <label class="form-check-label" for="q4a">τρώει πρωινό</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="katerinaKsypnima" id="q4b" value="ksanakoimate">
+                    <label class="form-check-label" for="q4b">ξανακοιμάται</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="katerinaKsypnima" id="q4c" value="gymnastiki">
+                    <label class="form-check-label" for="q4c">γυμναστική</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="katerinaKsypnima" id="q4d" value="zygizete">
+                    <label class="form-check-label" for="q4d">ζυγίζετε</label>
+                </div>
+                <button type="button" class="btn btn-primary next-btn">Επόμενο</button>
+            </div>
+            <div class="quiz-question" id="minamelitos">
+                <h3>5.Πού θα πάμε ταξίδι του μέλιτος;</h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="minaMelitos" id="q5a" value="trelathikes" required>
+                    <label class="form-check-label" for="q5a">τρελάθηκες;;; Ίσα ίσα που πληρώσαμε τα έξοδα του γάμου</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="minaMelitos" id="q5b" value="opouTheleiPanos">
+                    <label class="form-check-label" for="q5b">φυσικά και ναι, όπου αρέσει στον Παναγιώτη</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="minaMelitos" id="q5c" value="opouTheleiKatia">
+                    <label class="form-check-label" for="q5c">φυσικά και ναι, όπου πει η Κατερίνα</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="minaMelitos" id="q5d" value="thivet">
+                    <label class="form-check-label" for="q5d">στο μακρινό Θιβέτ και στις Ινδίες με γκουρού δασκάλους και Ινδούς</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Υποβολή</button>
+            </div>
+            
+            <!-- Hidden fields for extra functionality -->
+            <input type="hidden" name="_subject" value="Νέο Κουίζ!">
+            <input type="hidden" name="_captcha" value="false"> <!-- Disable Captcha for easier submission -->
+            <input type="hidden" name="_autoresponse" value="Ευχαριστούμε για τη συμμετοχή σας στο κουίζ!">
+        </form>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const nextButtons = document.querySelectorAll('.next-btn');
+            nextButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const currentQuestion = this.closest('.quiz-question');
+                    const nextQuestion = currentQuestion.nextElementSibling;
+                    if (nextQuestion && nextQuestion.classList.contains('quiz-question')) {
+                        currentQuestion.classList.remove('active');
+                        nextQuestion.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
